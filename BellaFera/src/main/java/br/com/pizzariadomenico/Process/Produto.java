@@ -15,6 +15,7 @@ public class Produto {
     private String nome;
     private String descricao;
     private String preco;
+    private String broto;
     private String ativo;
     private String tipo;
 
@@ -48,6 +49,14 @@ public class Produto {
 
     public void setPreco(String preco) {
         this.preco = preco;
+    }
+
+    public String getBroto() {
+        return broto;
+    }
+
+    public void setBroto(String broto) {
+        this.broto = broto;
     }
 
     public String getAtivo() {
