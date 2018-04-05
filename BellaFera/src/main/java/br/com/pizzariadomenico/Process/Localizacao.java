@@ -7,49 +7,36 @@ package br.com.pizzariadomenico.Process;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author jonat
+ * @author joliveira
  */
-@WebServlet(name = "GetSabores", urlPatterns = {"/cardapio"})
-public class GetSabores extends HttpServlet {
-
+public class Localizacao extends HttpServlet {
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, Exception {
+            throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        List<Produto> pizzas = Utils.ListarPizzasPaginaInicialPizzas();
-        List<Produto> doces = Utils.ListarPizzasPaginaInicialDoces();
         
-        request.setAttribute("pizzas", pizzas);
-        request.setAttribute("doces", doces);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/cardapio.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/localizacao.jsp");
         dispatcher.forward(request, response);
+        
     }
-
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (Exception ex) {
-            Logger.getLogger(GetSabores.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        processRequest(request, response);
     }
 }

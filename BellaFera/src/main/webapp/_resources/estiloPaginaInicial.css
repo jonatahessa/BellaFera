@@ -70,6 +70,10 @@ body .static-header img {
       font-size: 20px;
     }
 
+    #section5 {
+      padding-bottom: 300px;
+    }
+
 }
 
 @media (max-width: 769px) {
@@ -107,12 +111,16 @@ body .static-header img {
     }
 
     .sessoes {
-      padding-top: 185px;
+      padding-top: 50px;
     }
 
     .fonte-roboto {
       font-family: 'Roboto', sans-serif;
       font-size: 13px;
+    }
+
+    #whatsapp {
+      display: none;
     }
 }
 
@@ -249,4 +257,8 @@ body .container__content > div.section4 {
 
 .descricao {
   clear: both;
+}
+
+.black-background {
+  background-color: #505050;
 }

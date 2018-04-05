@@ -19,21 +19,26 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author jonat
+ * @author joliveira
  */
-@WebServlet(name = "GetSabores", urlPatterns = {"/cardapio"})
-public class GetSabores extends HttpServlet {
+@WebServlet(name = "Promocoes", urlPatterns = {"/promocoes"})
+public class Promocoes extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, Exception {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        List<Produto> pizzas = Utils.ListarPizzasPaginaInicialPizzas();
-        List<Produto> doces = Utils.ListarPizzasPaginaInicialDoces();
-        
-        request.setAttribute("pizzas", pizzas);
-        request.setAttribute("doces", doces);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/cardapio.jsp");
+        List<Produto> promocoes = Utils.ListarPizzasPaginaInicialPromocoes();
+
+        if (promocoes != null) {
+            for (Produto prod : promocoes) {
+                String promoConvert = prod.getDescricao().replaceAll("\n", "<br/>");
+                prod.setDescricao(promoConvert);
+            }
+        }
+
+        request.setAttribute("promocoes", promocoes);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/promocao.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -43,13 +48,7 @@ public class GetSabores extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (Exception ex) {
-            Logger.getLogger(GetSabores.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Promocoes.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
     }
 }

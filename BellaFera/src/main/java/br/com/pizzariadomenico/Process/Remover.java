@@ -42,10 +42,10 @@ public class Remover extends HttpServlet {
         } else {
             try {
                 Utils.desativar(Integer.parseInt(request.getParameter("codigo")));
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/Manutencao");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/manutencao");
                 dispatcher.forward(request, response);
             } catch (Exception ex) {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/Manutencao");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/manutencao");
                 dispatcher.forward(request, response);
             }
         }

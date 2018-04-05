@@ -47,9 +47,9 @@ public class Salvar extends HttpServlet {
                 pizza.setAtivo("SIM");
                 try {
                     Utils.inserirPizza(pizza);
-                    response.sendRedirect("Manutencao");
+                    response.sendRedirect("manutencao");
                 } catch (Exception ex) {
-                    response.sendRedirect("Manutencao");
+                    response.sendRedirect("manutencao");
                 }
 
             } else {
