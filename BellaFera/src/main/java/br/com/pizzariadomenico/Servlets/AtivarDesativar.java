@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.pizzariadomenico.Process;
+package br.com.pizzariadomenico.Servlets;
 
+import br.com.pizzariadomenico.Classes.Produto;
+import br.com.pizzariadomenico.Classes.Utils;
+import br.com.pizzariadomenico.Servlets.AbrirEditar;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -21,13 +24,12 @@ import javax.servlet.http.HttpSession;
  *
  * @author jonat
  */
-@WebServlet(name = "Remover", urlPatterns = {"/Remover"})
-public class Remover extends HttpServlet {
+@WebServlet(name = "AtivarDesativar", urlPatterns = {"/AtivarDesativar"})
+public class AtivarDesativar extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
     }
 
     @Override
@@ -40,13 +42,23 @@ public class Remover extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("/Entrar");
             dispatcher.forward(request, response);
         } else {
+            Produto produto = new Produto();
             try {
-                Utils.desativar(Integer.parseInt(request.getParameter("codigo")));
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/manutencao");
-                dispatcher.forward(request, response);
+                try {
+                    produto = Utils.obter(Integer.parseInt(request.getParameter("codigo-ativar")));
+                } catch (Exception ex) {
+                    Logger.getLogger(AbrirEditar.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                if (produto.getAtivo().equalsIgnoreCase("SIM")) {
+                    produto.setAtivo("NAO");
+                } else {
+                    produto.setAtivo("SIM");
+                }
+                Utils.alterar(produto);
+                response.sendRedirect("Manutencao");
             } catch (Exception ex) {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/manutencao");
-                dispatcher.forward(request, response);
+                response.sendRedirect("Manutencao");
             }
         }
     }

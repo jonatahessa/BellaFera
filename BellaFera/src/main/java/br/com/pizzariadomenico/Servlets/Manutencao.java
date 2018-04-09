@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.pizzariadomenico.Process;
+package br.com.pizzariadomenico.Servlets;
 
+import br.com.pizzariadomenico.Classes.Produto;
+import br.com.pizzariadomenico.Classes.Utils;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;

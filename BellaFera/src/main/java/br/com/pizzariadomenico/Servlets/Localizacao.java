@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.pizzariadomenico.Process;
+package br.com.pizzariadomenico.Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,15 +17,14 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author joliveira
  */
-public class Contato extends HttpServlet {
+public class Localizacao extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/contato.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/localizacao.jsp");
         dispatcher.forward(request, response);
         
     }
@@ -35,7 +34,6 @@ public class Contato extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
     }
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

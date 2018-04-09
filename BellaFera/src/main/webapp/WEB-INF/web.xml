@@ -6,59 +6,63 @@
     </servlet>
     <servlet>
         <servlet-name>GetSabores</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.GetSabores</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.GetSabores</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AtivarDesativar</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.AtivarDesativar</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.AtivarDesativar</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Salvar</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Salvar</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Salvar</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Editar</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Salvar</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Salvar</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Entrar</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Entrar</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Entrar</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Login</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Login</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Logout</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Logout</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Logout</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Manutencao</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Manutencao</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Manutencao</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Remover</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Remover</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Remover</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AbrirEditar</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.AbrirEditar</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.AbrirEditar</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Promocoes</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Promocoes</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Promocoes</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Home</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Home</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Home</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Localizacao</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Localizacao</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Localizacao</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Contato</servlet-name>
-        <servlet-class>br.com.pizzariadomenico.Process.Contato</servlet-class>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Contato</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Email</servlet-name>
+        <servlet-class>br.com.pizzariadomenico.Servlets.Email</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetSabores</servlet-name>
@@ -112,6 +116,10 @@
     <servlet-mapping>
         <servlet-name>Contato</servlet-name>
         <url-pattern>/contato</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Email</servlet-name>
+        <url-pattern>/email</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

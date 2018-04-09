@@ -1,7 +1,7 @@
 package br.com.pizzariadomenico.Daos;
 
 import br.com.pizzariadomenico.Connection.ConnectionUtils;
-import br.com.pizzariadomenico.Process.Produto;
+import br.com.pizzariadomenico.Classes.Produto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
