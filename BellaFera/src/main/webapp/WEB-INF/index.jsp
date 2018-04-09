@@ -12,17 +12,18 @@
         <div class="container-fluid">
 
             <div class="row justify-content-center">
-                <div class="col-12">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-cadastro">Cadastrar</button>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 backgrounded sessoes text-center">
+                    <h2 class="fonte-lato">Cadastre-se aqui no site e ganhe um desconto de 30% no próximo pedido, é rapidinho!</h2>
+                    <button type="button" class="btn btn-success btn-lg col-4 button-center" data-toggle="modal" data-target="#modal-cadastro">Cadastrar</button>
+
+                    <c:if test="${!sessionScope.mensagem == false}">
+                        <div class="alert alert-success" role="alert">
+                            <h1>Cadastro feito com sucesso!</h1>
+                            <p>Ligue e no seu próximo pedido peça o desconto.</p>
+                        </div>
+                    </c:if>
                 </div>
             </div>
-
-            <c:if test="${!sessionScope.mensagem == false}">
-                <div class="alert alert-success" role="alert">
-                    <h1>Cadastro feito com sucesso!</h1>
-                    <p>Ligue e no seu próximo pedido peça o desconto.</p>
-                </div>
-            </c:if>
 
             <div class="row justify-content-center">
                 <div id="section1" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 backgrounded section1 sessoes">
@@ -60,38 +61,38 @@
 
                             <div class="form-group">
                                 <label>Nome Completo</label>
-                                <input class="form-control" type="text" name="nome" placeholder="Entre o nome completo."/>
+                                <input class="form-control" type="text" name="nome" required placeholder="Entre o nome completo"/>
                             </div>
 
                             <div class="form-group">
                                 <label>E-mail</label>
-                                <input class="form-control" type="email" name="email" placeholder="Entre o e-mail."/>
+                                <input class="form-control" type="email" name="email" required placeholder="Entre o e-mail"/>
                             </div>
 
                             <div class="form-group">
                                 <label>CEP</label>
-                                <input class="form-control" type="text" name="cep" placeholder="Entre o CEP."/>
+                                <input id="cep" class="form-control" type="text" name="cep" required placeholder="Entre o CEP"/>
                             </div>
 
                             <div class="form-group">
                                 <label>Endereço</label>
-                                <input class="form-control" type="text" name="endereco" placeholder="Entre o endereço."/>
+                                <input id="logradouro" class="form-control" type="text" name="endereco" required placeholder="Entre o endereço"/>
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group">
+                                <div class="col">
                                     <label>Número</label>
-                                    <input class="form-control" type="text" name="numero" placeholder="Número.">
+                                    <input id="numero" class="form-control" type="text" name="numero" required placeholder="Número">
                                 </div>
 
-                                <div class="form-group">
+                                <div class="col">
                                     <label>Complemento</label>
-                                    <input class="form-control" type="text" name="complemento" placeholder="Complemento.">
+                                    <input class="form-control" type="text" name="complemento" placeholder="Complemento">
                                 </div>
 
                                 <div class="form-group">
                                     <label>Telefone</label>
-                                    <input class="form-control" type="text" name="telefone" placeholder="Telefone.">
+                                    <input class="form-control" type="text" name="telefone" required placeholder="Telefone">
                                 </div>
                             </div>
                         </div>

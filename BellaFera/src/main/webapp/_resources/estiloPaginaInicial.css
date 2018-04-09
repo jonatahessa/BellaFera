@@ -210,8 +210,17 @@ body .container__content > div.section4 {
   font-family: 'Lobster', cursive;
 }
 
+.fonte-lato {
+  font-family: 'Lato', sans-serif;
+}
+
 .backgrounded {
     background-color: rgba(255, 253, 235, 0.8);
+}
+
+.button-center {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .botoes-menu {
