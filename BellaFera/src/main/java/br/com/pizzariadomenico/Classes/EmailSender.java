@@ -32,10 +32,11 @@ public class EmailSender {
                 + "Email: " + cliente.getEmail() + "\n"
                 + "Telefone: " + cliente.getTelefone() + "\n"
                 + "Cep: " + cliente.getCep() + "\n"
-                + "Endereço: " + cliente.getEndereco() + " " + cliente.getNumero() + " Complemento: " + cliente.getComplemento());
-        
+                + "Endereço: " + cliente.getEndereco() + " " + cliente.getNumero() + "\n"
+                + " Complemento: " + cliente.getComplemento());
+
         Transport.send(message);
-        
+
         return true;
     }
 }

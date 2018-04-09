@@ -1,3 +1,4 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -10,15 +11,16 @@
 
         <div class="container-fluid">
 
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-12">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-cadastro">Cadastrar</button>
                 </div>
             </div>
 
-            <c:if test="${sessionScope.message == null}">
+            <c:if test="${!sessionScope.mensagem == false}">
                 <div class="alert alert-success" role="alert">
-                    <h1>Cadastro Realizado com Sucesso!</h1>
+                    <h1>Cadastro feito com sucesso!</h1>
+                    <p>Ligue e no seu próximo pedido peça o desconto.</p>
                 </div>
             </c:if>
 

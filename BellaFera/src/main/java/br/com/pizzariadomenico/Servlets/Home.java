@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -29,6 +30,8 @@ public class Home extends HttpServlet {
         
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/index.jsp");
         dispatcher.forward(request, response);
+        HttpSession session = request.getSession();
+            session.setAttribute("mensagem", false);
         
     }
     @Override

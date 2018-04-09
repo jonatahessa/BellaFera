@@ -40,12 +40,13 @@ public class Email extends HttpServlet {
         cliente.setNumero(request.getParameter("numero"));
         cliente.setComplemento(request.getParameter("complemento"));
 
-        HttpSession session = request.getSession(false);
         try {
-            session.setAttribute("mensagem", br.com.pizzariadomenico.Classes.EmailSender.enviaEmail(cliente));
+            br.com.pizzariadomenico.Classes.EmailSender.enviaEmail(cliente);
+            HttpSession session = request.getSession();
+            session.setAttribute("mensagem", true);
+            response.sendRedirect("home");
         } catch (MessagingException ex) {
             Logger.getLogger(Email.class.getName()).log(Level.SEVERE, null, ex);
         }
-        response.sendRedirect("home");
     }
 }
