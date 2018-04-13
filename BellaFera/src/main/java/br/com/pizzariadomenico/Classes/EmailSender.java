@@ -20,7 +20,7 @@ public class EmailSender {
         Session session = Session.getDefaultInstance(properties,
                 new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("bellaeferapizzaria@gmail.com", "");
+                return new PasswordAuthentication("bellaeferapizzaria@gmail.com", "Bf198904");
             }
         });
 
