@@ -8,7 +8,7 @@ public class EmailSender {
 
     public static boolean enviaEmail(Cliente cliente) throws AddressException, MessagingException {
 
-        String to = "jon.hmo@outlook.com";
+        String to = "contato@bellaeferapizzaria.com.br";
 
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.gmail.com");
@@ -20,7 +20,7 @@ public class EmailSender {
         Session session = Session.getDefaultInstance(properties,
                 new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("jonata.hessa@gmail.com", "br@sil3000");
+                return new PasswordAuthentication("bellaeferapizzaria@gmail.com", "");
             }
         });
 
@@ -28,11 +28,11 @@ public class EmailSender {
         message.setFrom(new InternetAddress("jonata.hessa@gmail.com"));
         message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
         message.setSubject("Cadastro de Cliente");
-        message.setText("Nome: " + cliente.getNome() + "\n"
-                + "Email: " + cliente.getEmail() + "\n"
-                + "Telefone: " + cliente.getTelefone() + "\n"
-                + "Cep: " + cliente.getCep() + "\n"
-                + "Endereço: " + cliente.getEndereco() + " " + cliente.getNumero() + "\n"
+        message.setText("Nome: " + cliente.getNome() + "\n\n"
+                + "Email: " + cliente.getEmail() + "\n\n"
+                + "Telefone: " + cliente.getTelefone() + "\n\n"
+                + "Cep: " + cliente.getCep() + "\n\n"
+                + "Endereço: " + cliente.getEndereco() + " " + cliente.getNumero() + "\n\n"
                 + " Complemento: " + cliente.getComplemento());
 
         Transport.send(message);
