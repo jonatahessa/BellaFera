@@ -22,10 +22,10 @@ public class ConnectionUtils {
             Class.forName(driverName);
             
             //Configurando a conexao com o banco de dados
-            String serveName = "bellafera01.mysql.uhserver.com"; // Caminho do servidor do BD
-            String mydatabase = "bellafera01"; // Nome do banco de dados
+            String serveName = "bellafera02.mysql.uhserver.com"; // Caminho do servidor do BD
+            String mydatabase = "bellafera02"; // Nome do banco de dados
             String url = "jdbc:mysql://" + serveName + "/" + mydatabase;
-            String username = "bellafera01"; // Nome de usuario
+            String username = "bellafera02"; // Nome de usuario
             String password = "br@sil20"; // Senha de acesso
             connection = DriverManager.getConnection(url, username, password);
             
