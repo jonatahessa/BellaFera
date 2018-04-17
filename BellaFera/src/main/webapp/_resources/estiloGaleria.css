@@ -123,5 +123,61 @@
 }
 
 .galeria {
-  height: 100%;
+  height: 400px;
+}
+
+.back-pacoca {
+  background: url(../_imagens/pizzaPacoca.jpeg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.back-doritos {
+  background: url(../_imagens/pizzaDoritos.jpeg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.back-brocolis {
+  background: url(../_imagens/pizzaBrocolis.jpeg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.back-portuguesa {
+  background: url(../_imagens/pizzaPortuguesa.jpeg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.back-rucula {
+  background: url(../_imagens/pizzaRucula.jpeg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.back-maguerita {
+  background: url(../_imagens/pizzaMeiaMargueritaFrango.jpeg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.back-bella {
+  background: url(../_imagens/pizzaModaBella.jpeg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

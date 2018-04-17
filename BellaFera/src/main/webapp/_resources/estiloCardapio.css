@@ -1,0 +1,23 @@
+#pills-home {
+  padding-top: 100px;
+}
+
+#pills-profile {
+  padding-top: 100px;
+}
+
+.tabelas {
+  width: 100%;
+}
+
+.codigo-nome {
+  float: left;
+}
+
+.grande-broto {
+  float: right;
+}
+
+.descricao {
+  clear: both;
+}
