@@ -58,7 +58,7 @@
 
                   <div class="form-inline">
                     <div class="col-6">
-                      <a href="Manutencao" class="btn btn-danger btn-block" role="button">Cancelar</a>
+                      <a href="manutencao" class="btn btn-danger btn-block" role="button">Cancelar</a>
                     </div>
 
                     <div class="col-6">

@@ -17,8 +17,8 @@
                         <div class="row justify-content-center">
                             <div class="paineis col-xs-12 col-sm-12 col-md-8 col-lg-6 border border-dark text-center">
                                 <h2 class="text-warning fonte-acme contorno">${promocao.nome}</h2>
-                                <h3 class="fonte-acme">${promocao.descricao}</h3>
-                                <h1 class="text-warning fonte-acme contorno">${promocao.preco}</h1>
+                                <h4 class="fonte-acme promo-descricao">${promocao.descricao}</h4>
+                                <h1 class="text-warning fonte-acme contorno display-4">${promocao.preco}</h1>
                             </div>
                         </div>
                     </c:forEach>

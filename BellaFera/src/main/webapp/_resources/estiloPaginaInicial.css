@@ -239,6 +239,10 @@ body .container__content > div.section4 {
   padding: 20px;
 }
 
+.promo-descricao {
+  line-height: 40px;
+}
+
 .cardapios {
   list-style: none;
 }

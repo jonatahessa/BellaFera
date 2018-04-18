@@ -65,9 +65,9 @@ public class Salvar extends HttpServlet {
 
                 try {
                     Utils.alterar(pizza);
-                    response.sendRedirect("Manutencao");
+                    response.sendRedirect("manutencao");
                 } catch (Exception ex) {
-                    response.sendRedirect("Manutencao");
+                    response.sendRedirect("manutencao");
                 }
             }
         }

@@ -1,5 +1,6 @@
 function main() {
     document.querySelector("#select-tipo").addEventListener("change", hideShowBroto);
+    hideShowBroto();
 }
 
 function hideShowBroto() {

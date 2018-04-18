@@ -34,7 +34,7 @@
                                         <c:forEach var="pizza" items="${pizzas}">
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                               <div class="col-6 codigo-nome fonte-roboto">
-                                                <h5 class="text-danger">${pizza.codigo} - ${pizza.nome}</h5>
+                                                <h5 class="text-danger">${pizza.codigo}. ${pizza.nome}</h5>
                                               </div>
                                               <div class="col-6 grande-broto fonte-roboto">
                                                 <h5 class="text-success text-right">Broto: ${pizza.broto}</h5>
