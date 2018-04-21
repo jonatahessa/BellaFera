@@ -30,9 +30,9 @@
 
                                 <div class="row salgadas">
                                     <div class="col-12">
-                                      <div class="row">
+                                      <div class="row justify-content-center">
                                         <c:forEach var="pizza" items="${pizzas}">
-                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                               <div class="col-6 codigo-nome fonte-roboto">
                                                 <h5 class="text-danger">${pizza.codigo}. ${pizza.nome}</h5>
                                               </div>
@@ -43,7 +43,7 @@
                                               <div class="col-12 descricao fonte-roboto">
                                                 <p>${pizza.descricao}</p>
                                               </div>
-                                              <hr/>
+                                              <hr class="linhas"/>
                                             </div>
                                         </c:forEach>
                                       </div>
@@ -54,9 +54,9 @@
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                               <div class="row salgadas">
                                   <div class="col-12">
-                                    <div class="row">
+                                    <div class="row justify-content-center">
                                       <c:forEach var="doce" items="${doces}">
-                                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                             <div class="col-6 codigo-nome fonte-roboto">
                                               <h5 class="text-danger">${doce.codigo} - ${doce.nome}</h5>
                                             </div>
@@ -67,7 +67,7 @@
                                             <div class="col-12 descricao fonte-roboto">
                                               <p>${doce.descricao}</p>
                                             </div>
-                                            <hr/>
+                                            <hr class="linhas"/>
                                           </div>
                                       </c:forEach>
                                     </div>
