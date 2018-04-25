@@ -56,9 +56,9 @@ public class AtivarDesativar extends HttpServlet {
                     produto.setAtivo("SIM");
                 }
                 Utils.alterar(produto);
-                response.sendRedirect("Manutencao");
+                response.sendRedirect("manutencao");
             } catch (Exception ex) {
-                response.sendRedirect("Manutencao");
+                response.sendRedirect("manutencao");
             }
         }
     }
