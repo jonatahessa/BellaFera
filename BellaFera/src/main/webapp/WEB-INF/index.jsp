@@ -13,7 +13,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 backgrounded sessoes text-center">
-                    <h2 class="fonte-lato">Cadastre-se aqui no site e ganhe um desconto de 30% no próximo pedido, é rapidinho!</h2>
+                    <h2 class="fonte-lato">Cadastre-se aqui no site e ganhe um desconto de 15% no próximo pedido, é rapidinho!</h2>
                     <button type="button" class="btn btn-success btn-lg col-4 button-center" data-toggle="modal" data-target="#modal-cadastro">Cadastrar</button>
 
                     <c:if test="${!sessionScope.mensagem == false}">
